@@ -7,7 +7,7 @@ import './style.css';
 // 🔥 FILL THIS OUT FIRST! 🔥
 // 🔥 GET YOUR GEMINI API KEY AT 🔥
 // 🔥 https://g.co/ai/idxGetGeminiKey 🔥
-let API_KEY = 'AIzaSyCmQFI6yh8tywJWIxFFIdkxWwAalbSBO_k';
+let API_KEY = 'AIzaSyCwmpJqd5_aImTP1a5vbZv2zX4rmzYC-dM';
 
 let form = document.querySelector('form');
 let promptInput = document.querySelector('input[name="prompt"]');
@@ -16,13 +16,13 @@ let output = document.querySelector('.output');
 // Call the gemini-pro-vision model, and get a stream of results
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-pro",
-  safetySettings: [
-    {
-      category: HarmCategory.HARM_CATEGORY_HARASSMENT,
-      threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH,
-    },
-  ],
+  model: "gemini-2.0-flash",
+  // safetySettings: [
+  //   {
+  //     category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+  //     threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+  //   },
+  // ],
 });
 
 const chat = model.startChat({
